@@ -1,3 +1,9 @@
-recordlinkage>=0.16
 numexpr>=2.10.2
 bottleneck>=1.4.2
+recordlinkage>=0.16
+blocklib>=0.1.11
+bitarray>=3.3.2
+pandas~=2.2.3
+numpy~=1.26.4
+datasketch>=1.6.5
+textnoisr>=1.1.3
