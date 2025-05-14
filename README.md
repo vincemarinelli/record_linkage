@@ -1,0 +1,9 @@
+# <center>Linking Records Between ClinicalTrials.gov and NPPES NPI Database </center>
+
+Record Linkage refers to the task of linking records using a matching set of attributes shared by the two records. For example, we often need to match a list customers with a list of payees, or a list of patients with a list of users of a specific medication, etc. Another common example is the identification and removal of duplicate entries within a dataset. Record Linkage has also been referred to as data linkage, entity resolution, and data matching.
+
+In the simplest case, we have a shared attribute that represents a unique identifier for the record (e.g. SSN, TIN, ISBN, etc). In this case we may assume that this identifier absolutely and completely identities the unique entity. Unfortunately, outside of the world of controlled schemas this is rarely true. More often, we need to use the full set of attributes that can be mapped between the two rows to develop a level of confidence that the two rows are the same. The attributes used to match are referred to as Quasi-Identifiers (QIDs). Each QID contributes a specific weight to the overall match probability that is proportional to the amount of information that the QID contributes. For example, a matching street address contributes a larger weight than a matching marital status because the street address has a higher cardinality / lower match probability then marital status.
+
+This repo provides a demo of the Python Record Linkage Toolkit and applies the toolset to linking records between two publically available sets of clinical investigator information.
+
+All code runs as within a Jupyter Notebook and all required Python packages are captured in requirements.txt. Note that some of the packages used require a Python 3 version lower than 3.12. All development was done using Python 3.11.
